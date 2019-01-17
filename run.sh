@@ -26,9 +26,9 @@ docker run -d \
            -e BOINC_CMD_LINE_OPTIONS="--allow_remote_gui_rpc" \
            "mausy5043/boinc:${tag}"
 
-sleep 10
+#sleep 10
 
-docker exec boinc boinccmd --join_acct_mgr "${MGR}" "${USR}" "${PSK}"
+#docker exec boinc boinccmd --join_acct_mgr "${MGR}" "${USR}" "${PSK}"
 
 sleep 10
 
