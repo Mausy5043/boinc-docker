@@ -17,13 +17,14 @@ if [ ! -f Dockerfile ]; then
 fi
 
 docker run -d \
-  --name boinc \
-  -h boinc \
-  -v /srv/array1/config/configs/boinc/:/var/lib/boinc \
-  -p 31416:31416 \
-  -e BOINC_GUI_RPC_PASSWORD="123" \
-  -e BOINC_CMD_LINE_OPTIONS="--allow_remote_gui_rpc" \
-  mausy5043/boinc:"mausy5043/boinc:${tag}"
+           --restart unless-stopped \
+           --name boinc \
+           -h boinc \
+           -v /srv/array1/config/configs/boinc/:/var/lib/boinc \
+           -p 31416:31416 \
+           -e BOINC_GUI_RPC_PASSWORD="123" \
+           -e BOINC_CMD_LINE_OPTIONS="--allow_remote_gui_rpc" \
+           "mausy5043/boinc:${tag}"
 
 sleep 10
 
