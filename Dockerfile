@@ -1,17 +1,18 @@
 FROM boinc/client:latest
 MAINTAINER Mausy5043
 
-ENV TZ=Europe/Amsterdam
-
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime \
- && echo $TZ > /etc/timezone
-
 RUN apt-get -qqy update    \
  && apt-get -qqy autoclean  \
  && apt-get -qqy autoremove  \
  && apt-get -qqyV upgrade     \
  && apt-get install -qqy boinctui \
+                         tzdata \
                          locales
+
+ENV TZ=Europe/Amsterdam
+
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime \
+ && echo $TZ > /etc/timezone
 
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en
