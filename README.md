@@ -1,8 +1,9 @@
 # boinc-docker
 
-It is advised to clone the Git repository and build your own image from that, provided the latest build (see [Docker Hub](https://hub.docker.com/r/mausy5043/boinc)) was successful.
+It is advised to clone the Git repository and build your own image from that, provided the latest build (see [Docker Hub](https://hub.docker.com/r/mausy5043/boinc)) was successful.  
 On GitHub: [https://github.com/Mausy5043/boinc-docker](https://github.com/Mausy5043/boinc-docker
-)
+) DEPRECATED  
+On GitLab: [https://gitlab.com/mausy5043-docker/boinc](https://gitlab.com/mausy5043-docker/boinc) ACTIVE  
 
 ## Installing
 The preferred procedure is:
